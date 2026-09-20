@@ -35,7 +35,7 @@
     },
     "services": {
         "audioIncrement": 0.05,
-        "defaultPlayer": "Mozilla zen",
+        "defaultPlayer": "com.github.th-ch.youtube-music",
         "useFahrenheit": false
     },
     "utilities": {
@@ -70,7 +70,7 @@
             }
         ],
         "vpn": {
-            "enabled": false,
+            "enabled": true,
             "provider": [
                 {
                     "connectCmd": [
