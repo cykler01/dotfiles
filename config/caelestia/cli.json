@@ -1,0 +1,5 @@
+{
+  "theme": {
+    "postHook": "python3 \"$HOME/.config/fastfetch/render.py\""
+  }
+}
