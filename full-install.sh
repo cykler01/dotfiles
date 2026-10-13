@@ -10,7 +10,7 @@ echo "Starting system setup..."
 "$DOTFILES_ROOT/scripts/installation/appimages.sh"
 "$DOTFILES_ROOT/scripts/installation/lazyvim-install.sh"
 "$DOTFILES_ROOT/scripts/installation/install-bash.sh"
-"$DOTFILES_ROOT/scripts/installation/install-fuzzel.sh"
+"$DOTFILES_ROOT/scripts/installation/install-fetch.sh"
 "$DOTFILES_ROOT/scripts/installation/install-config.sh"
 "$DOTFILES_ROOT/scripts/installation/wallpapers.sh"
 
