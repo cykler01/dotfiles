@@ -1,0 +1,16 @@
+{
+  "name": "spacefetch",
+  "version": "0.1.0",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "type": "module",
+  "bin": { "spacefetch": "src/main.ts" },
+  "scripts": {
+    "start": "bun src/main.ts",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5"
+  }
+}

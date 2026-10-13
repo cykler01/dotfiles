@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# spacefetch, wired for this rice: the Caelestia wallpaper scheme, black hole body.
+#
+#   spacefetch                    # 3s animation of the black hole, in your wallpaper's colors
+#   spacefetch --zone sun         # pick a body: sun rocky gas ice comet hole
+#   spacefetch --static           # one frame, no animation
+#   spacefetch --seconds 10       # longer animation
+#
+#   spacefetch --mono             # black and white instead of the scheme
+#   spacefetch --no-scheme        # spacefetch's own built-in colors
+#
+# Every spacefetch flag passes straight through. Only `--zone hole` is
+# prepended, and passing your own --zone or --percent replaces it.
+set -euo pipefail
+
+DIR=${SPACEFETCH_DIR:-$HOME/.local/share/spacefetch}
+BUN=${BUN:-$(command -v bun || echo "$HOME/.bun/bin/bun")}
+
+if [[ ! -x $BUN ]]; then
+  echo "spacefetch: Bun not found (looked for '$BUN'); see https://bun.sh" >&2
+  exit 1
+fi
+
+# Black hole by default; passing your own --zone or --percent still wins.
+zone=(--zone hole)
+for arg in "$@"; do
+  case $arg in
+    --zone | --zone=* | --percent | --percent=*) zone=() ;;
+  esac
+done
+
+exec "$BUN" "$DIR/src/main.ts" "${zone[@]}" "$@"
