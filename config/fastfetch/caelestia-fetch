@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Animated ASCII-galaxy fastfetch, tinted from the live Caelestia scheme.
+# Use it wherever you currently call `fastfetch` (alias fetch / shell rc).
+here="$(cd "$(dirname "$(readlink -f "$0")")" && pwd)"
+exec python3 "$here/galaxy.py" --fetch "$@"

@@ -1,0 +1,53 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+
+    // Rendered into config.jsonc by render.py using the live Caelestia scheme.
+    // Edit THIS file, then run: python3 ~/.config/fastfetch/render.py
+    // (Caelestia also runs it automatically via theme.postHook in cli.json)
+
+    "logo": {
+        "type": "data",
+        "source": "            ...:::::::...\n        .::*#%%%%%%%%%%#*::.\n     .:=#%%@@#*+==+*#@@%%#=:.\n   .-*#@@#*=:.      .:=*#@@#*-.\n  .=%@%*=:   .:=+*+-.   :=*%@%=.\n .+#@%=:  .-*#%%%%%#*-.  :=%@#+.\n  .=%@%*=:   :+*#*+:   :=*%@%=.\n   .-*#@@#*=:.  .  .:=*#@@#*-.\n     .:=#%%@@#*+==+*#@@%%#=:.\n        .::*#%%%%%%%%%%#*::.\n            ...:::::::...",
+        "padding": { "left": 3, "right": 3, "top": 1 }
+    },
+
+    "display": {
+        "separator": "  ",
+        "constants": [
+            "{{! onSurface }}",
+            "{{! onSurfaceVariant }}",
+            "{{! primary }}",
+            "{{! tertiary }}",
+            "{{! secondary }}",
+            "{{! error }}",
+            "{{! success }}",
+            "{{! outlineVariant | dark }}",
+            "{{! peach }}",
+            "{{! mauve }}"
+        ]
+    },
+
+    "modules": [
+        "break",
+
+        { "type": "custom", "key": "{$8}╭───────────────────────────────────╮{$1}" },
+
+        { "type": "kernel",   "key": "{$8}│{$1} {$3}󰑄{$1}  kernel", "format": "{$1}{release>22} {$8}│{$1}" },
+        { "type": "command",  "key": "{$8}│{$1}    {$2}uptime{$1}", "text": "uptime -p | cut -d ' ' -f 2-", "format": "{$1}{>22} {$8}│{$1}" },
+        { "type": "os",       "key": "{$8}│{$1} {$9}󰻀{$1}  distro", "format": "{$9}{pretty-name>22} {$8}│{$1}" },
+        { "type": "shell",    "key": "{$8}│{$1} {$3}{$1}  shell ", "format": "{$3}{pretty-name>22} {$8}│{$1}" },
+        { "type": "command",  "key": "{$8}│{$1} {$5}{$1}  wm    ", "text": "echo ${XDG_CURRENT_DESKTOP:-unknown}", "format": "{$5}{>22} {$8}│{$1}" },
+        { "type": "cpu",      "key": "{$8}│{$1} {$4}󰒋{$1}  cpu   ", "format": "{$4}{name>22} {$8}│{$1}" },
+        { "type": "command",  "key": "{$8}│{$1} {$10}{$1}  mem   ", "text": "free -m | awk 'NR==2{printf \"%.2f GiB / %.2f GiB\",$3/1024,$2/1024}'", "format": "{$10}{>22} {$8}│{$1}" },
+        { "type": "command",  "key": "{$8}│{$1} {$9}󰋊{$1}  disk  ", "text": "df -h --output=used,size,pcent / | tail -1 | tr -s ' '", "format": "{$9}{>22} {$8}│{$1}" },
+        { "type": "packages", "key": "{$8}│{$1}    {$2}pkgs  {$1}", "format": "{$2}{all>22} {$8}│{$1}" },
+        { "type": "localip",  "key": "{$8}│{$1} {$5}󰖟{$1}  ipv4  ", "format": "{$5}{ipv4>22} {$8}│{$1}" },
+        { "type": "command",  "key": "{$8}│{$1} {$3}{$1}  user  ", "text": "echo $USER", "format": "{$3}{>22} {$8}│{$1}" },
+        { "type": "command",  "key": "{$8}│{$1} {$9}󰋜{$1}  hname ", "text": "hostnamectl hostname", "format": "{$9}{>22} {$8}│{$1}" },
+        { "type": "command",  "key": "{$8}│{$1} {$4}󰅐{$1}  time  ", "text": "date '+%Y-%m-%d %H:%M'", "format": "{$4}{>22} {$8}│{$1}" },
+
+        { "type": "custom", "key": "{$8}╰───────────────────────────────────╯{$1}" },
+
+        "break"
+    ]
+}
