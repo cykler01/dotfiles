@@ -33,6 +33,7 @@ YM_TARGET="$HOME/.config/YouTube Music"
 YM_THEME="$YM_TARGET/themes/caelestia.css"
 mkdir -p "$YM_TARGET/themes"
 ln -sf "$DOTFILES_ROOT/config/youtube-music/themes/caelestia.css" "$YM_THEME"
+ln -sf "$DOTFILES_ROOT/config/youtube-music/themes/render.py" "$YM_TARGET/themes/render.py"
 
 # Register the theme in the app config (Pear only loads CSS listed in options.themes)
 python3 - "$YM_TARGET/config.json" "$YM_THEME" <<'PY'

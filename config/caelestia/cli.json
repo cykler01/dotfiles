@@ -1,5 +1,5 @@
 {
   "theme": {
-    "postHook": "python3 \"$HOME/.config/fastfetch/render.py\""
+    "postHook": "python3 \"$HOME/.config/fastfetch/render.py\"; python3 \"$HOME/.config/YouTube Music/themes/render.py\""
   }
 }
