@@ -35,6 +35,11 @@ mkdir -p "$YM_TARGET/themes"
 ln -sf "$DOTFILES_ROOT/config/youtube-music/themes/caelestia.css" "$YM_THEME"
 ln -sf "$DOTFILES_ROOT/config/youtube-music/themes/render.py" "$YM_TARGET/themes/render.py"
 
+# The theme CSS is generated (not tracked), so render it once for a fresh setup
+if [ -f "$HOME/.local/state/caelestia/scheme.json" ]; then
+  python3 "$YM_TARGET/themes/render.py"
+fi
+
 # Register the theme in the app config (Pear only loads CSS listed in options.themes)
 python3 - "$YM_TARGET/config.json" "$YM_THEME" <<'PY'
 import json, os, sys

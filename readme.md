@@ -26,9 +26,9 @@ The terminal fetch setup, themed off the live Caelestia colour scheme (it re-tin
 ## Pear Desktop (YouTube Music)
 The music player is themed off the same live Caelestia scheme:
 
- - `config/youtube-music/themes/caelestia.css` -> Pear Desktop theme, injected via `options.themes` in `~/.config/YouTube Music/config.json`
- - `config/youtube-music/themes/render.py` -> re-renders the CSS from the wallpaper scheme (`python3 config/youtube-music/themes/render.py`)
- - `install-config.sh` -> symlinks the theme into place and registers it in the app config (restart Pear to apply, it only injects CSS at window creation)
+ - `config/youtube-music/themes/render.py` -> renders the theme from the wallpaper scheme (`python3 config/youtube-music/themes/render.py`), also run by the caelestia theme post-hook on every wallpaper change
+ - `config/youtube-music/themes/caelestia.css` -> the generated theme (gitignored, not tracked), injected via `options.themes` in `~/.config/YouTube Music/config.json`
+ - `install-config.sh` -> links the theme and renderer into place, renders it once, and registers it in the app config (restart Pear to apply, it only injects CSS at window creation)
 
 ## Scripts
 Tools and shortcuts included in this repository:
