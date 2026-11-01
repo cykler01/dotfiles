@@ -4,93 +4,93 @@
  */
 
 :root {
-  --cael-surface: #130c0e;
-  --cael-surface-low: #1a1113;
-  --cael-surface-container: #211719;
-  --cael-surface-high: #281d1f;
-  --cael-surface-highest: #2f2225;
-  --cael-on-surface: #f7e0e3;
-  --cael-on-surface-variant: #bba6a9;
-  --cael-outline: #837174;
-  --cael-outline-variant: #534447;
-  --cael-primary: #f5b6c2;
-  --cael-on-primary: #5f333e;
-  --cael-primary-container: #744550;
-  --cael-secondary: #e4bdc3;
-  --cael-tertiary: #ffe2ff;
+  --cael-surface: #0a0f0e;
+  --cael-surface-low: #0e1513;
+  --cael-surface-container: #131b19;
+  --cael-surface-high: #19211f;
+  --cael-surface-highest: #1e2826;
+  --cael-on-surface: #dde8e4;
+  --cael-on-surface-variant: #a2adaa;
+  --cael-outline: #6d7875;
+  --cael-outline-variant: #3f4a48;
+  --cael-primary: #9cd1c7;
+  --cael-on-primary: #104841;
+  --cael-primary-container: #275b53;
+  --cael-secondary: #b1ccc6;
+  --cael-tertiary: #cff0ff;
   --cael-error: #fa746f;
   --cael-success: #B5CCBA;
 
   /* ---- surfaces ---- */
-  --ytmusic-background: #130c0e !important;
-  --dark-theme-background-color: #130c0e !important;
-  --ytmusic-color-black1: #211719 !important;
-  --ytmusic-color-black2: #130c0e !important;
-  --ytmusic-color-black3: #130c0e !important;
-  --ytmusic-color-black4: #130c0e !important;
-  --ytmusic-color-blackpure: #130c0e !important;
-  --yt-spec-base-background: #130c0e !important;
-  --yt-spec-raised-background: #211719 !important;
-  --yt-spec-menu-background: #281d1f !important;
-  --yt-spec-general-background-a: #1a1113 !important;
-  --yt-spec-general-background-b: #130c0e !important;
-  --yt-spec-general-background-c: #130c0e !important;
-  --yt-spec-brand-background-solid: #130c0e !important;
-  --yt-spec-brand-background-primary: #130c0e !important;
-  --yt-spec-static-overlay-background-solid: #130c0e !important;
-  --yt-spec-static-overlay-background-heavy: #281d1fcc !important;
-  --yt-spec-static-overlay-background-medium: #281d1f99 !important;
-  --yt-spec-static-overlay-background-light: #281d1f4d !important;
-  --yt-spec-black-1: #281d1f !important;
-  --yt-spec-black-2: #211719 !important;
-  --yt-spec-black-3: #1a1113 !important;
-  --yt-spec-black-4: #130c0e !important;
-  --yt-spec-black-pure: #130c0e !important;
-  --ytmusic-search-background: #211719 !important;
-  --ytmusic-search-background-paper: #211719 !important;
-  --paper-dialog-background-color: #281d1f !important;
-  --paper-toast-background-color: #281d1f !important;
-  --ytmusic-menu-item-hover-background-color: #281d1f !important;
-  --ytmusic-setting-item-toggle-active: #f5b6c2 !important;
-  --ytmusic-setting-item-toggle-inactive: #534447 !important;
+  --ytmusic-background: #0a0f0e !important;
+  --dark-theme-background-color: #0a0f0e !important;
+  --ytmusic-color-black1: #131b19 !important;
+  --ytmusic-color-black2: #0a0f0e !important;
+  --ytmusic-color-black3: #0a0f0e !important;
+  --ytmusic-color-black4: #0a0f0e !important;
+  --ytmusic-color-blackpure: #0a0f0e !important;
+  --yt-spec-base-background: #0a0f0e !important;
+  --yt-spec-raised-background: #131b19 !important;
+  --yt-spec-menu-background: #19211f !important;
+  --yt-spec-general-background-a: #0e1513 !important;
+  --yt-spec-general-background-b: #0a0f0e !important;
+  --yt-spec-general-background-c: #0a0f0e !important;
+  --yt-spec-brand-background-solid: #0a0f0e !important;
+  --yt-spec-brand-background-primary: #0a0f0e !important;
+  --yt-spec-static-overlay-background-solid: #0a0f0e !important;
+  --yt-spec-static-overlay-background-heavy: #19211fcc !important;
+  --yt-spec-static-overlay-background-medium: #19211f99 !important;
+  --yt-spec-static-overlay-background-light: #19211f4d !important;
+  --yt-spec-black-1: #19211f !important;
+  --yt-spec-black-2: #131b19 !important;
+  --yt-spec-black-3: #0e1513 !important;
+  --yt-spec-black-4: #0a0f0e !important;
+  --yt-spec-black-pure: #0a0f0e !important;
+  --ytmusic-search-background: #131b19 !important;
+  --ytmusic-search-background-paper: #131b19 !important;
+  --paper-dialog-background-color: #19211f !important;
+  --paper-toast-background-color: #19211f !important;
+  --ytmusic-menu-item-hover-background-color: #19211f !important;
+  --ytmusic-setting-item-toggle-active: #9cd1c7 !important;
+  --ytmusic-setting-item-toggle-inactive: #3f4a48 !important;
 
   /* ---- text ---- */
-  --ytmusic-text-primary: #f7e0e3 !important;
-  --ytmusic-text-secondary: #bba6a9 !important;
-  --yt-spec-text-primary: #f7e0e3 !important;
-  --yt-spec-text-secondary: #bba6a9 !important;
-  --yt-spec-text-disabled: #837174 !important;
-  --yt-spec-text-primary-inverse: #130c0e !important;
-  --yt-spec-static-brand-white: #f7e0e3 !important;
+  --ytmusic-text-primary: #dde8e4 !important;
+  --ytmusic-text-secondary: #a2adaa !important;
+  --yt-spec-text-primary: #dde8e4 !important;
+  --yt-spec-text-secondary: #a2adaa !important;
+  --yt-spec-text-disabled: #6d7875 !important;
+  --yt-spec-text-primary-inverse: #0a0f0e !important;
+  --yt-spec-static-brand-white: #dde8e4 !important;
 
   /* ---- accents / icons / controls ---- */
-  --yt-spec-call-to-action: #f5b6c2 !important;
-  --yt-spec-call-to-action-inverse: #744550 !important;
-  --yt-spec-brand-icon-active: #f5b6c2 !important;
-  --yt-spec-brand-icon-inactive: #bba6a9 !important;
-  --yt-spec-icon-active-other: #f7e0e3 !important;
-  --yt-spec-icon-inactive: #bba6a9 !important;
-  --yt-spec-icon-disabled: #837174 !important;
-  --yt-spec-brand-link-text: #f5b6c2 !important;
-  --yt-spec-brand-button-background: #f5b6c2 !important;
-  --yt-spec-brand-button-background-hover: #744550 !important;
-  --yt-spec-filled-button-background: #f5b6c2 !important;
-  --yt-spec-filled-button-text: #5f333e !important;
-  --yt-spec-chip-background: #2f2225 !important;
-  --yt-spec-badge-chip-background: #2f2225 !important;
-  --yt-spec-button-chip-background-hover: #281d1f !important;
-  --yt-spec-inverted-background: #f5b6c2 !important;
-  --yt-spec-static-brand-black: #281d1f !important;
-  --yt-spec-10-percent-layer: #5344471a !important;
-  --yt-spec-20-percent-layer: #53444733 !important;
-  --paper-progress-active-color-1: #f5b6c2 !important;
-  --paper-progress-active-color-2: #e4bdc3 !important;
-  --paper-slider-knob-color: #f5b6c2 !important;
-  --paper-slider-active-color: #f5b6c2 !important;
-  --paper-slider-container-color: #2f2225 !important;
-  --paper-toggle-button-checked-bar-color: #f5b6c2 !important;
-  --paper-toggle-button-checked-button-color: #f5b6c2 !important;
-  --yt-spec-overlay-background-medium: #281d1f99 !important;
+  --yt-spec-call-to-action: #9cd1c7 !important;
+  --yt-spec-call-to-action-inverse: #275b53 !important;
+  --yt-spec-brand-icon-active: #9cd1c7 !important;
+  --yt-spec-brand-icon-inactive: #a2adaa !important;
+  --yt-spec-icon-active-other: #dde8e4 !important;
+  --yt-spec-icon-inactive: #a2adaa !important;
+  --yt-spec-icon-disabled: #6d7875 !important;
+  --yt-spec-brand-link-text: #9cd1c7 !important;
+  --yt-spec-brand-button-background: #9cd1c7 !important;
+  --yt-spec-brand-button-background-hover: #275b53 !important;
+  --yt-spec-filled-button-background: #9cd1c7 !important;
+  --yt-spec-filled-button-text: #104841 !important;
+  --yt-spec-chip-background: #1e2826 !important;
+  --yt-spec-badge-chip-background: #1e2826 !important;
+  --yt-spec-button-chip-background-hover: #19211f !important;
+  --yt-spec-inverted-background: #9cd1c7 !important;
+  --yt-spec-static-brand-black: #19211f !important;
+  --yt-spec-10-percent-layer: #3f4a481a !important;
+  --yt-spec-20-percent-layer: #3f4a4833 !important;
+  --paper-progress-active-color-1: #9cd1c7 !important;
+  --paper-progress-active-color-2: #b1ccc6 !important;
+  --paper-slider-knob-color: #9cd1c7 !important;
+  --paper-slider-active-color: #9cd1c7 !important;
+  --paper-slider-container-color: #1e2826 !important;
+  --paper-toggle-button-checked-bar-color: #9cd1c7 !important;
+  --paper-toggle-button-checked-button-color: #9cd1c7 !important;
+  --yt-spec-overlay-background-medium: #19211f99 !important;
   --yt-spec-alert-error-background: #fa746f !important;
   --yt-spec-alert-success-background: #B5CCBA !important;
 }
@@ -98,39 +98,39 @@
 /* ---- explicit containers ---- */
 html,
 body {
-  background-color: #130c0e !important;
-  color: #f7e0e3 !important;
+  background-color: #0a0f0e !important;
+  color: #dde8e4 !important;
 }
 
 ytmusic-app,
 ytmusic-app-layout,
 #layout {
-  background-color: #130c0e !important;
-  color: #f7e0e3 !important;
+  background-color: #0a0f0e !important;
+  color: #dde8e4 !important;
 }
 
 #nav-bar-background,
 ytmusic-nav-bar {
-  background-color: #281d1f !important;
-  color: #f7e0e3 !important;
+  background-color: #19211f !important;
+  color: #dde8e4 !important;
 }
 
 #guide-wrapper,
 #mini-guide-background {
-  background-color: #211719 !important;
+  background-color: #131b19 !important;
 }
 
 #player-bar-background,
 ytmusic-player-bar {
-  background-color: #211719 !important;
-  color: #f7e0e3 !important;
-  border-top: 1px solid #2f2225 !important;
+  background-color: #131b19 !important;
+  color: #dde8e4 !important;
+  border-top: 1px solid #1e2826 !important;
 }
 
 #player-page,
 ytmusic-player {
-  background-color: #130c0e !important;
-  color: #f7e0e3 !important;
+  background-color: #0a0f0e !important;
+  color: #dde8e4 !important;
 }
 
 /* greyed metadata in the player bar and queue */
@@ -139,41 +139,41 @@ ytmusic-player {
 .time-info.ytmusic-player-bar,
 .menu.ytmusic-player-bar,
 .icon.ytmusic-menu-navigation-item-renderer {
-  color: #bba6a9 !important;
-  --yt-endpoint-color: #bba6a9 !important;
-  --yt-endpoint-hover-color: #f5b6c2 !important;
-  --yt-endpoint-visited-color: #bba6a9 !important;
-  --iron-icon-fill-color: #bba6a9 !important;
+  color: #a2adaa !important;
+  --yt-endpoint-color: #a2adaa !important;
+  --yt-endpoint-hover-color: #9cd1c7 !important;
+  --yt-endpoint-visited-color: #a2adaa !important;
+  --iron-icon-fill-color: #a2adaa !important;
 }
 
 /* playback progress + volume */
 #progress-bar.ytmusic-player-bar {
-  --paper-slider-active-color: #f5b6c2 !important;
-  --paper-slider-knob-color: #f5b6c2 !important;
-  --paper-slider-container-color: #2f2225 !important;
-  --paper-slider-secondary-color: #534447 !important;
+  --paper-slider-active-color: #9cd1c7 !important;
+  --paper-slider-knob-color: #9cd1c7 !important;
+  --paper-slider-container-color: #1e2826 !important;
+  --paper-slider-secondary-color: #3f4a48 !important;
 }
 
 .volume-slider.ytmusic-player-bar,
 .expand-volume-slider.ytmusic-player-bar {
-  --paper-slider-active-color: #f5b6c2 !important;
-  --paper-slider-knob-color: #f5b6c2 !important;
-  --paper-slider-container-color: #2f2225 !important;
+  --paper-slider-active-color: #9cd1c7 !important;
+  --paper-slider-knob-color: #9cd1c7 !important;
+  --paper-slider-container-color: #1e2826 !important;
 }
 
 /* selection + scrollbars */
 ::selection {
-  background-color: #744550 !important;
-  color: #ffdae0 !important;
+  background-color: #275b53 !important;
+  color: #b8eee3 !important;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #534447 !important;
+  background-color: #3f4a48 !important;
   border-radius: 999px !important;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #837174 !important;
+  background-color: #6d7875 !important;
 }
 
 ::-webkit-scrollbar {
