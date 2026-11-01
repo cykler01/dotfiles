@@ -28,4 +28,28 @@ done
 rm -rf "$CAELESTIA_TARGET"
 ln -sf "$DOTFILES_ROOT/config/caelestia" "$CAELESTIA_TARGET"
 
-echo "Hyprland and Caelestia configurations successfully installed!"
+# 5. Pear Desktop (YouTube Music) Caelestia theme
+YM_TARGET="$HOME/.config/YouTube Music"
+YM_THEME="$YM_TARGET/themes/caelestia.css"
+mkdir -p "$YM_TARGET/themes"
+ln -sf "$DOTFILES_ROOT/config/youtube-music/themes/caelestia.css" "$YM_THEME"
+
+# Register the theme in the app config (Pear only loads CSS listed in options.themes)
+python3 - "$YM_TARGET/config.json" "$YM_THEME" <<'PY'
+import json, os, sys
+
+config_path, theme_path = sys.argv[1], sys.argv[2]
+data = {}
+if os.path.exists(config_path):
+    with open(config_path) as f:
+        data = json.load(f)
+
+themes = data.setdefault("options", {}).setdefault("themes", [])
+if theme_path not in themes:
+    themes.append(theme_path)
+    with open(config_path, "w") as f:
+        json.dump(data, f, indent="\t")
+    print(f"Registered {theme_path} in {config_path}")
+PY
+
+echo "Hyprland, Caelestia and Pear Desktop configurations successfully installed!"

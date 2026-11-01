@@ -1,0 +1,181 @@
+/* Caelestia theme for Pear Desktop (YouTube Music)
+ * Generated from ~/.local/state/caelestia/scheme.json
+ * scheme: dynamic / tonalspot / dark
+ */
+
+:root {
+  --cael-surface: #0d0e12;
+  --cael-surface-low: #121318;
+  --cael-surface-container: #181920;
+  --cael-surface-high: #1e1f26;
+  --cael-surface-highest: #23252e;
+  --cael-on-surface: #e4e4f0;
+  --cael-on-surface-variant: #a9aab5;
+  --cael-outline: #73757f;
+  --cael-outline-variant: #464750;
+  --cael-primary: #bac5ee;
+  --cael-on-primary: #343f61;
+  --cael-primary-container: #465174;
+  --cael-secondary: #c1c6dd;
+  --cael-tertiary: #f3deff;
+  --cael-error: #fa746f;
+  --cael-success: #B5CCBA;
+
+  /* ---- surfaces ---- */
+  --ytmusic-background: #0d0e12 !important;
+  --dark-theme-background-color: #0d0e12 !important;
+  --ytmusic-color-black1: #181920 !important;
+  --ytmusic-color-black2: #0d0e12 !important;
+  --ytmusic-color-black3: #0d0e12 !important;
+  --ytmusic-color-black4: #0d0e12 !important;
+  --ytmusic-color-blackpure: #0d0e12 !important;
+  --yt-spec-base-background: #0d0e12 !important;
+  --yt-spec-raised-background: #181920 !important;
+  --yt-spec-menu-background: #1e1f26 !important;
+  --yt-spec-general-background-a: #121318 !important;
+  --yt-spec-general-background-b: #0d0e12 !important;
+  --yt-spec-general-background-c: #0d0e12 !important;
+  --yt-spec-brand-background-solid: #0d0e12 !important;
+  --yt-spec-brand-background-primary: #0d0e12 !important;
+  --yt-spec-static-overlay-background-solid: #0d0e12 !important;
+  --yt-spec-static-overlay-background-heavy: #1e1f26cc !important;
+  --yt-spec-static-overlay-background-medium: #1e1f2699 !important;
+  --yt-spec-static-overlay-background-light: #1e1f264d !important;
+  --yt-spec-black-1: #1e1f26 !important;
+  --yt-spec-black-2: #181920 !important;
+  --yt-spec-black-3: #121318 !important;
+  --yt-spec-black-4: #0d0e12 !important;
+  --yt-spec-black-pure: #0d0e12 !important;
+  --ytmusic-search-background: #181920 !important;
+  --ytmusic-search-background-paper: #181920 !important;
+  --paper-dialog-background-color: #1e1f26 !important;
+  --paper-toast-background-color: #1e1f26 !important;
+  --ytmusic-menu-item-hover-background-color: #1e1f26 !important;
+  --ytmusic-setting-item-toggle-active: #bac5ee !important;
+  --ytmusic-setting-item-toggle-inactive: #464750 !important;
+
+  /* ---- text ---- */
+  --ytmusic-text-primary: #e4e4f0 !important;
+  --ytmusic-text-secondary: #a9aab5 !important;
+  --yt-spec-text-primary: #e4e4f0 !important;
+  --yt-spec-text-secondary: #a9aab5 !important;
+  --yt-spec-text-disabled: #73757f !important;
+  --yt-spec-text-primary-inverse: #0d0e12 !important;
+  --yt-spec-static-brand-white: #e4e4f0 !important;
+
+  /* ---- accents / icons / controls ---- */
+  --yt-spec-call-to-action: #bac5ee !important;
+  --yt-spec-call-to-action-inverse: #465174 !important;
+  --yt-spec-brand-icon-active: #bac5ee !important;
+  --yt-spec-brand-icon-inactive: #a9aab5 !important;
+  --yt-spec-icon-active-other: #e4e4f0 !important;
+  --yt-spec-icon-inactive: #a9aab5 !important;
+  --yt-spec-icon-disabled: #73757f !important;
+  --yt-spec-brand-link-text: #bac5ee !important;
+  --yt-spec-brand-button-background: #bac5ee !important;
+  --yt-spec-brand-button-background-hover: #465174 !important;
+  --yt-spec-filled-button-background: #bac5ee !important;
+  --yt-spec-filled-button-text: #343f61 !important;
+  --yt-spec-chip-background: #23252e !important;
+  --yt-spec-badge-chip-background: #23252e !important;
+  --yt-spec-button-chip-background-hover: #1e1f26 !important;
+  --yt-spec-inverted-background: #bac5ee !important;
+  --yt-spec-static-brand-black: #1e1f26 !important;
+  --yt-spec-10-percent-layer: #4647501a !important;
+  --yt-spec-20-percent-layer: #46475033 !important;
+  --paper-progress-active-color-1: #bac5ee !important;
+  --paper-progress-active-color-2: #c1c6dd !important;
+  --paper-slider-knob-color: #bac5ee !important;
+  --paper-slider-active-color: #bac5ee !important;
+  --paper-slider-container-color: #23252e !important;
+  --paper-toggle-button-checked-bar-color: #bac5ee !important;
+  --paper-toggle-button-checked-button-color: #bac5ee !important;
+  --yt-spec-overlay-background-medium: #1e1f2699 !important;
+  --yt-spec-alert-error-background: #fa746f !important;
+  --yt-spec-alert-success-background: #B5CCBA !important;
+}
+
+/* ---- explicit containers ---- */
+html,
+body {
+  background-color: #0d0e12 !important;
+  color: #e4e4f0 !important;
+}
+
+ytmusic-app,
+ytmusic-app-layout,
+#layout {
+  background-color: #0d0e12 !important;
+  color: #e4e4f0 !important;
+}
+
+#nav-bar-background,
+ytmusic-nav-bar {
+  background-color: #1e1f26 !important;
+  color: #e4e4f0 !important;
+}
+
+#guide-wrapper,
+#mini-guide-background {
+  background-color: #181920 !important;
+}
+
+#player-bar-background,
+ytmusic-player-bar {
+  background-color: #181920 !important;
+  color: #e4e4f0 !important;
+  border-top: 1px solid #23252e !important;
+}
+
+#player-page,
+ytmusic-player {
+  background-color: #0d0e12 !important;
+  color: #e4e4f0 !important;
+}
+
+/* greyed metadata in the player bar and queue */
+.duration.ytmusic-player-queue-item,
+.byline.ytmusic-player-queue-item,
+.time-info.ytmusic-player-bar,
+.menu.ytmusic-player-bar,
+.icon.ytmusic-menu-navigation-item-renderer {
+  color: #a9aab5 !important;
+  --yt-endpoint-color: #a9aab5 !important;
+  --yt-endpoint-hover-color: #bac5ee !important;
+  --yt-endpoint-visited-color: #a9aab5 !important;
+  --iron-icon-fill-color: #a9aab5 !important;
+}
+
+/* playback progress + volume */
+#progress-bar.ytmusic-player-bar {
+  --paper-slider-active-color: #bac5ee !important;
+  --paper-slider-knob-color: #bac5ee !important;
+  --paper-slider-container-color: #23252e !important;
+  --paper-slider-secondary-color: #464750 !important;
+}
+
+.volume-slider.ytmusic-player-bar,
+.expand-volume-slider.ytmusic-player-bar {
+  --paper-slider-active-color: #bac5ee !important;
+  --paper-slider-knob-color: #bac5ee !important;
+  --paper-slider-container-color: #23252e !important;
+}
+
+/* selection + scrollbars */
+::selection {
+  background-color: #465174 !important;
+  color: #dce2ff !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #464750 !important;
+  border-radius: 999px !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #73757f !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px !important;
+}
