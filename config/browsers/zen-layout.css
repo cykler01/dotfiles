@@ -1,0 +1,155 @@
+/* Caelestia aesthetic layer for Zen - geometry, spacing and motion.
+ *
+ * Colours live in caelestia.css; this file only changes shape and feel.
+ * Selectors are :root-prefixed so these rules beat the equally-!important
+ * tweaks in userChrome.css no matter which import comes first.
+ */
+
+:root {
+  --cael-radius-xl: 18px;
+  --cael-radius-lg: 14px;
+  --cael-radius-md: 10px;
+  --cael-radius-sm: 8px;
+}
+
+/* --- flat chrome: no borders, no shadows, seamless toolbar --- */
+:root #navigator-toolbox,
+:root #nav-bar,
+:root #TabsToolbar,
+:root #PersonalToolbar,
+:root #titlebar {
+  border: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+:root #navigator-toolbox::after,
+:root #nav-bar::after {
+  display: none !important;
+}
+
+/* --- tabs: rounded, floating, tighter spacing --- */
+:root .tabbrowser-tab {
+  padding-inline: 2px !important;
+}
+
+:root .tabbrowser-tab .tab-background {
+  border-radius: var(--cael-radius-md) !important;
+  margin-block: 3px !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+:root .tabbrowser-tab[selected] .tab-background {
+  border-radius: var(--cael-radius-md) !important;
+}
+
+:root .tabbrowser-tab .tab-close-button {
+  border-radius: 50% !important;
+}
+
+:root #tabs-newtab-button,
+:root #new-tab-button,
+:root #alltabs-button {
+  border-radius: var(--cael-radius-sm) !important;
+}
+
+/* --- url bar: pill shaped, flat --- */
+:root #urlbar-background,
+:root #searchbar {
+  border-radius: var(--cael-radius-xl) !important;
+  border: 1px solid var(--cael-outline-variant) !important;
+  box-shadow: none !important;
+}
+
+:root #urlbar[focused] > #urlbar-background {
+  border-color: var(--cael-primary) !important;
+  box-shadow: none !important;
+}
+
+:root #urlbar[breakout][breakout-extend] > #urlbar-background {
+  border-radius: var(--cael-radius-lg) !important;
+}
+
+:root #urlbar-input::placeholder {
+  color: var(--cael-on-surface-variant) !important;
+}
+
+/* centre the url bar text until it is focused */
+:root #urlbar:not([focused]) .urlbar-input {
+  text-align: center !important;
+}
+
+/* --- buttons and toolbar items --- */
+:root .toolbarbutton-1,
+:root toolbarbutton,
+:root .urlbar-page-action,
+:root #page-action-buttons > *,
+:root #identity-box > * {
+  border-radius: var(--cael-radius-sm) !important;
+}
+
+:root .toolbarbutton-1 > .toolbarbutton-icon {
+  border-radius: var(--cael-radius-sm) !important;
+}
+
+/* --- panels, menus, autocomplete --- */
+:root menupopup,
+:root panel,
+:root .panel-arrowcontent,
+:root .urlbarView {
+  border-radius: var(--cael-radius-lg) !important;
+  border: 1px solid var(--cael-surface-high) !important;
+  box-shadow: none !important;
+}
+
+:root .urlbarView-row {
+  border-radius: var(--cael-radius-sm) !important;
+}
+
+/* --- sidebar: floating rounded card --- */
+:root #sidebar-box {
+  border-radius: var(--cael-radius-lg) !important;
+  margin: 4px !important;
+  border: 1px solid var(--cael-surface-high) !important;
+  overflow: hidden !important;
+}
+
+:root #sidebar-header {
+  border-bottom: 1px solid var(--cael-surface-high) !important;
+}
+
+/* --- zen surfaces: rounding + hidden splitter --- */
+:root #zen-appcontent-wrapper,
+:root #zen-tabbox-wrapper {
+  border-radius: var(--cael-radius-lg) !important;
+  overflow: hidden !important;
+}
+
+:root #zen-sidebar-splitter {
+  opacity: 0 !important;
+  min-width: 4px !important;
+}
+
+/* --- motion --- */
+:root .tabbrowser-tab,
+:root .tabbrowser-tab .tab-background,
+:root toolbarbutton,
+:root .urlbarView-row,
+:root #urlbar-background {
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease !important;
+}
+
+/* --- dimmed unloaded tabs --- */
+:root .tabbrowser-tab[pending] {
+  filter: grayscale(1) !important;
+  opacity: 0.5 !important;
+}
+
+/* --- slim scrollbars everywhere --- */
+:root * {
+  scrollbar-width: thin !important;
+}

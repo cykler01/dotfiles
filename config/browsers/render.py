@@ -22,6 +22,7 @@ MARKER = "/* caelestia: generated colour layer, do not edit here */"
 IMPORT_LINE = '@import url("caelestia.css");'
 HERE = pathlib.Path(__file__).resolve().parent
 FIREFOX_LAYOUT = HERE / "firefox-layout.css"
+ZEN_LAYOUT = HERE / "zen-layout.css"
 LAYOUT_NAME = "caelestia-layout.css"
 LAYOUT_IMPORT = f'@import url("{LAYOUT_NAME}");'
 
@@ -218,6 +219,16 @@ def append_import(profile: pathlib.Path, line: str) -> str:
     return "layout import added"
 
 
+def layout_for(profile: pathlib.Path) -> pathlib.Path | None:
+    """Each browser gets its own geometry layer; Firefox and Zen diverge a lot."""
+    where = str(profile)
+    if "/.config/zen/" in where:
+        return ZEN_LAYOUT
+    if "/.mozilla/firefox/" in where:
+        return FIREFOX_LAYOUT
+    return None
+
+
 def main() -> None:
     scheme = json.loads(SCHEME.read_text())
     colours = {name: f"#{value}" for name, value in scheme["colours"].items()}
@@ -247,8 +258,9 @@ def main() -> None:
         print(f"{profile.name}:")
         print(f"  chrome/caelestia.css written")
         print(f"  userChrome.css: {install_import(profile)}")
-        if "firefox" in str(profile) and FIREFOX_LAYOUT.is_file():
-            (chrome / LAYOUT_NAME).write_text(FIREFOX_LAYOUT.read_text())
+        layout = layout_for(profile)
+        if layout is not None and layout.is_file():
+            (chrome / LAYOUT_NAME).write_text(layout.read_text())
             print(f"  chrome/{LAYOUT_NAME} written")
             print(f"  userChrome.css: {append_import(profile, LAYOUT_IMPORT)}")
         print(f"  stylesheet pref: {ensure_pref(profile)}")
