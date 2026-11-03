@@ -30,6 +30,13 @@ The music player is themed off the same live Caelestia scheme:
  - `config/youtube-music/themes/caelestia.css` -> the generated theme (gitignored, not tracked), injected via `options.themes` in `~/.config/YouTube Music/config.json`
  - `install-config.sh` -> links the theme and renderer into place, renders it once, and registers it in the app config (restart Pear to apply, it only injects CSS at window creation)
 
+## Browsers
+Firefox and Zen get the live Caelestia colours through a generated userChrome layer, since the upstream CaelestiaFox extension needs a signed XPI and a root-owned native host:
+
+ - `config/browsers/render.py` -> writes `caelestia.css` into every Firefox/Zen profile's `chrome/` dir and imports it from `userChrome.css`, also run by the caelestia theme post-hook
+ - Layout tweaks (centered url bar, rounded corners, animations) stay in `userChrome.css`; colours live only in the generated file
+ - Brave/Chromium cannot be userChrome-themed at all: caelestia's own path is the `BrowserThemeColor` policy written to `/etc/brave/policies/managed/caelestia.json`, which needs root
+
 ## Scripts
 Tools and shortcuts included in this repository:
 ### Bash Tools:

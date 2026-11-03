@@ -58,4 +58,11 @@ if theme_path not in themes:
     print(f"Registered {theme_path} in {config_path}")
 PY
 
-echo "Hyprland, Caelestia and Pear Desktop configurations successfully installed!"
+# 6. Browser themes (Firefox/Zen userChrome colour layer)
+mkdir -p "$HOME/.config/browsers"
+ln -sf "$DOTFILES_ROOT/config/browsers/render.py" "$HOME/.config/browsers/render.py"
+if [ -f "$HOME/.local/state/caelestia/scheme.json" ]; then
+  python3 "$HOME/.config/browsers/render.py"
+fi
+
+echo "Hyprland, Caelestia, Pear Desktop and browser configurations successfully installed!"
