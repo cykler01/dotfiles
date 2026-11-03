@@ -211,6 +211,16 @@ def main() -> None:
         name=scheme.get("name"), variant=scheme.get("variant"), mode=scheme.get("mode"), **colours
     )
 
+    # Brave (Chromium) cannot be userChrome-themed. Its only supported hook is a
+    # policy file under /etc, which needs root, so render it here for the user to install.
+    brave_policy = HOME / ".config/browsers/brave-policy.json"
+    brave_policy.parent.mkdir(parents=True, exist_ok=True)
+    brave_policy.write_text(
+        json.dumps({"BrowserThemeColor": colours["surface"], "BrowserColorScheme": "device"}, indent=2)
+        + "\n"
+    )
+    print(f"brave policy written to {brave_policy}")
+
     profiles = find_profiles()
     if not profiles:
         print("no Firefox/Zen profiles found")
