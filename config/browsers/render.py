@@ -20,6 +20,10 @@ SCHEME = pathlib.Path(os.environ.get("XDG_STATE_HOME", HOME / ".local/state")) /
 
 MARKER = "/* caelestia: generated colour layer, do not edit here */"
 IMPORT_LINE = '@import url("caelestia.css");'
+HERE = pathlib.Path(__file__).resolve().parent
+FIREFOX_LAYOUT = HERE / "firefox-layout.css"
+LAYOUT_NAME = "caelestia-layout.css"
+LAYOUT_IMPORT = f'@import url("{LAYOUT_NAME}");'
 
 PROFILE_ROOTS = [
     HOME / ".config/zen",  # zen-browser
@@ -204,6 +208,16 @@ def install_import(profile: pathlib.Path) -> str:
     return f"prepended import (backup: {backup.name})"
 
 
+def append_import(profile: pathlib.Path, line: str) -> str:
+    """Add an extra import without touching the existing tweaks or making a backup."""
+    user_chrome = profile / "chrome" / "userChrome.css"
+    text = user_chrome.read_text()
+    if line in text:
+        return "layout import already present"
+    user_chrome.write_text(f"{MARKER}\n{line}\n\n{text}")
+    return "layout import added"
+
+
 def main() -> None:
     scheme = json.loads(SCHEME.read_text())
     colours = {name: f"#{value}" for name, value in scheme["colours"].items()}
@@ -233,6 +247,10 @@ def main() -> None:
         print(f"{profile.name}:")
         print(f"  chrome/caelestia.css written")
         print(f"  userChrome.css: {install_import(profile)}")
+        if "firefox" in str(profile) and FIREFOX_LAYOUT.is_file():
+            (chrome / LAYOUT_NAME).write_text(FIREFOX_LAYOUT.read_text())
+            print(f"  chrome/{LAYOUT_NAME} written")
+            print(f"  userChrome.css: {append_import(profile, LAYOUT_IMPORT)}")
         print(f"  stylesheet pref: {ensure_pref(profile)}")
 
 
