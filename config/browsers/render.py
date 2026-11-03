@@ -23,6 +23,7 @@ IMPORT_LINE = '@import url("caelestia.css");'
 HERE = pathlib.Path(__file__).resolve().parent
 FIREFOX_LAYOUT = HERE / "firefox-layout.css"
 ZEN_LAYOUT = HERE / "zen-layout.css"
+ZEN_CONTENT = HERE / "zen-content.css"
 LAYOUT_NAME = "caelestia-layout.css"
 LAYOUT_IMPORT = f'@import url("{LAYOUT_NAME}");'
 
@@ -263,6 +264,16 @@ def main() -> None:
             (chrome / LAYOUT_NAME).write_text(layout.read_text())
             print(f"  chrome/{LAYOUT_NAME} written")
             print(f"  userChrome.css: {append_import(profile, LAYOUT_IMPORT)}")
+
+        if "/.config/zen/" in str(profile) and ZEN_CONTENT.is_file():
+            page_css = profile / "userContent.css"
+            new_text = ZEN_CONTENT.read_text()
+            if page_css.is_file() and page_css.read_text() != new_text:
+                backup = profile / "userContent.css.pre-caelestia.bak"
+                if not backup.exists():
+                    backup.write_text(page_css.read_text())
+            page_css.write_text(new_text)
+            print("  userContent.css written (transparent new tab)")
         print(f"  stylesheet pref: {ensure_pref(profile)}")
 
 

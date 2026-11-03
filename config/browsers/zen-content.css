@@ -1,0 +1,52 @@
+/* Caelestia transparent new tab for Zen.
+ *
+ * Zen paints about:newtab opaque, which hides the wallpaper. This strips that
+ * fill so the window background shows through. It only becomes visible blur if
+ * browser.tabs.allow_transparent_browser is on and the compositor blurs the
+ * window (Hyprland: decoration.blur with ignore_opacity = true).
+ */
+
+@-moz-document url("about:newtab"), url("about:home"), url("about:blank") {
+  :root {
+    --newtab-background-color: transparent !important;
+    --newtab-background-color-secondary: transparent !important;
+    --newtab-border-color: transparent !important;
+  }
+
+  html,
+  body,
+  .activity-stream,
+  .outer-wrapper,
+  main,
+  #root,
+  .newtab-background,
+  #newtab-background,
+  .zen-newtab-background,
+  #zen-newtab-background,
+  .newtab-wrapper,
+  .search-wrapper,
+  .search-wrapper .search-handoff-button,
+  .search-wrapper input {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
+  /* washes Zen layers behind the page content */
+  body::before,
+  body::after,
+  #root::before,
+  #root::after {
+    background: transparent !important;
+    background-image: none !important;
+  }
+
+  /* keep the search widget legible on the blurred wallpaper */
+  .search-wrapper .search-handoff-button,
+  .search-wrapper input {
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    border-radius: 18px !important;
+    background-color: rgba(0, 0, 0, 0.25) !important;
+  }
+}

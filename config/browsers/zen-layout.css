@@ -131,6 +131,13 @@
   min-width: 4px !important;
 }
 
+/* --- transparency: let the window background (and compositor blur) show --- */
+:root #tabbrowser-tabpanels,
+:root #appcontent,
+:root browser[type="content"] {
+  background: transparent !important;
+}
+
 /* --- motion --- */
 :root .tabbrowser-tab,
 :root .tabbrowser-tab .tab-background,
