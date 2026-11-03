@@ -65,4 +65,11 @@ if [ -f "$HOME/.local/state/caelestia/scheme.json" ]; then
   python3 "$HOME/.config/browsers/render.py"
 fi
 
-echo "Hyprland, Caelestia, Pear Desktop and browser configurations successfully installed!"
+# 7. Obsidian snippet (per-vault CSS)
+mkdir -p "$HOME/.config/obsidian"
+ln -sf "$DOTFILES_ROOT/config/obsidian/render.py" "$HOME/.config/obsidian/render.py"
+if [ -f "$HOME/.local/state/caelestia/scheme.json" ]; then
+  python3 "$HOME/.config/obsidian/render.py"
+fi
+
+echo "Hyprland, Caelestia, Pear Desktop, browser and Obsidian configurations successfully installed!"

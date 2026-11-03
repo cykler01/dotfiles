@@ -1,5 +1,5 @@
 {
   "theme": {
-    "postHook": "python3 \"$HOME/.config/fastfetch/render.py\"; python3 \"$HOME/.config/YouTube Music/themes/render.py\"; python3 \"$HOME/.config/browsers/render.py\""
+    "postHook": "python3 \"$HOME/.config/fastfetch/render.py\"; python3 \"$HOME/.config/YouTube Music/themes/render.py\"; python3 \"$HOME/.config/browsers/render.py\"; python3 \"$HOME/.config/obsidian/render.py\""
   }
 }
